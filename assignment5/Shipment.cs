@@ -79,7 +79,22 @@ namespace assignment5
             this.deliveryFee = deliveryFee;
             Destination = destination;
         }
-
+        public void UpdateDeliveryFee(decimal newFee)
+        {
+            if (newFee > 0)
+            {
+                deliveryFee = newFee;
+            }
+        }
+        public void PrintShipment()
+        {
+            Console.WriteLine("Tracking Code: " + TrackingCode);
+            Console.WriteLine("Description: " + Description);
+            Console.WriteLine("Weight: " + Weight);
+            Console.WriteLine("Delivery Fee: " + DeliveryFee);
+            Console.WriteLine("Destination: " + Destination);
+            Console.WriteLine("Estimated Cost: " + EstimatedCost);
+        }
     } 
 }
 
